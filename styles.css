@@ -4,6 +4,9 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
+    box-sizing: border-box;
+    padding: 16px;
+    gap: 16px;
 }
 
 #app-title {
@@ -13,4 +16,18 @@ body {
 
 .lower-row {
     flex: auto;
+    display: flex;
+    flex-direction: row-reverse;
 }
+
+#sketchpad {
+    width: 436.97px;
+    box-sizing: border-box;
+    border: 1px solid black;
+    background-color: white;
+    margin: 0 auto;
+}
+
+/* #control-settings {
+    flex: 3;
+} */
