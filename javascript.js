@@ -8,4 +8,6 @@ function createGrid() {
   }
 }
 
+createGrid();
+
 console.log(sketchPad);
