@@ -27,11 +27,6 @@ body {
     background-color: white;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(16, 1fr);
-}
-
-.pixel {
-    border: 1px solid lightblue;
 }
 
 /* #control-settings {
