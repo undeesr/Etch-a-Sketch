@@ -1,9 +1,14 @@
 const sketchPad = document.querySelector("#sketchpad");
 
-function createGrid() {
+function configureGrid(n) {
+  sketchPad.style.gridTemplateColumns = `repeat(${n}, 1fr)`;
+  return n;
+}
+
+function createGrid(n) {
   const pixels = [];
 
-  for (let i = 0; i < 16 * 16; i++) {
+  for (let i = 0; i < n * n; i++) {
     const gridBlock = document.createElement("div");
     gridBlock.classList.add("pixel");
     sketchPad.appendChild(gridBlock);
@@ -15,8 +20,7 @@ function createGrid() {
 }
 
 function hoverEffect(pixel) {
-
-    const originalColor = pixel.style.backgroundColor;
+  const originalColor = pixel.style.backgroundColor;
 
   pixel.addEventListener("pointerenter", () => {
     pixel.style.backgroundColor = "black";
@@ -25,7 +29,19 @@ function hoverEffect(pixel) {
   return originalColor;
 }
 
-const pixels = createGrid();
+let NumberOfPixels = +prompt(
+  "Enter the number of pixels in the grid (more than 1 and less than 100)"
+);
+
+if (!(1 < NumberOfPixels < 100)) {
+  NumberOfPixels = +prompt(
+    "Enter the number of pixels in the grid (more than 1 and less than 100)"
+  );
+}
+
+configureGrid(NumberOfPixels);
+
+const pixels = createGrid(NumberOfPixels);
 
 pixels.forEach(hoverEffect);
 
