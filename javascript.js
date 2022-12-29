@@ -22,9 +22,7 @@ function hoverEffect(pixel) {
     pixel.style.backgroundColor = "black";
   });
 
-  pixel.addEventListener("pointerleave", () => {
-    pixel.style.backgroundColor = originalColor;
-  })
+  return originalColor;
 }
 
 const pixels = createGrid();
