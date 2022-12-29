@@ -1,0 +1,16 @@
+body {
+    background-color: lightgray;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#app-title {
+    text-align: center;
+    font-size: 56px;
+}
+
+.lower-row {
+    flex: auto;
+}
