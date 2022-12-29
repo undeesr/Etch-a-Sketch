@@ -23,7 +23,11 @@ function hoverEffect(pixel) {
   const originalColor = pixel.style.backgroundColor;
 
   pixel.addEventListener("pointerenter", () => {
-    pixel.style.backgroundColor = "black";
+    pixel.style.backgroundColor = `rgb(
+        ${Math.random() * 255},
+        ${Math.random() * 255},
+        ${Math.random() * 255}
+    )`;
   });
 
   return originalColor;
